@@ -1,0 +1,55 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "createToken",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"health","type":"uint8"},
+				{"name":"speed","type":"uint8"},
+				{"name":"jump_height","type":"uint8"},
+				{"name":"jump_distance","type":"uint8"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changePrice",
+			"inputs": [
+				{"name":"tokenId","type":"uint256"},
+				{"name":"pubKeyNewOwner","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changePower",
+			"inputs": [
+				{"name":"newPrice","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"name","type":"string"},{"name":"health","type":"uint8"},{"name":"speed","type":"uint8"},{"name":"jump_height","type":"uint8"},{"name":"jump_distance","type":"uint8"},{"name":"price","type":"uint256"}],"name":"tokensArr","type":"tuple[]"},
+		{"name":"tokenToOwner","type":"map(uint256,uint256)"}
+	]
+}
